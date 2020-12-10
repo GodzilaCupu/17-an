@@ -20,23 +20,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            hips.AddForce(-hips.transform.forward * speed);
-        }else 
-        if (Input.GetKey(KeyCode.S))
-        {
-            hips.AddForce(hips.transform.forward * speed);
-        }
-        else
         if (Input.GetKey(KeyCode.A))
         {
-            hips.AddForce(hips.transform.right * speed);
+            hips.AddForce(hips.transform.forward * speed);
         }else 
         if (Input.GetKey(KeyCode.D))
         {
-            hips.AddForce(-hips.transform.right* speed);
-        }else if (Input.GetKey(KeyCode.Space))
+            hips.AddForce(-hips.transform.forward * speed);
+        }
+        else
+        if (Input.GetKey(KeyCode.S))
+        {
+            hips.AddForce(-hips.transform.right * speed);
+        }else 
+        if (Input.GetKey(KeyCode.W))
+        {
+            hips.AddForce(hips.transform.right* speed);
+        }else if (Input.GetKey(KeyCode.LeftShift))
         {
             if (isGrounded)
             {
@@ -46,24 +46,34 @@ public class PlayerController : MonoBehaviour
         }
 
         // controller 2
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            hips2.AddForce(-hips.transform.forward * speed);
-        }
-        else
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             hips2.AddForce(hips.transform.forward * speed);
         }
         else
-        if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
         {
-            hips2.AddForce(hips.transform.right * speed);
+            hips2.AddForce(-hips.transform.forward * speed);
         }
         else
-        if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.DownArrow))
+        {
+            hips2.AddForce(-hips.transform.right * speed);
+        }
+        else
+            if (Input.GetKey(KeyCode.UpArrow))
         {
             hips2.AddForce(hips.transform.right * speed);
         }
+        else 
+            if (Input.GetKey(KeyCode.RightShift))
+        {
+            if (isGrounded)
+            {
+                hips2.AddForce(new Vector3(0, jumpForce, 0));
+                isGrounded = false;
+            }
+        }
+
     }
 }
