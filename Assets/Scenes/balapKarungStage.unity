@@ -2202,7 +2202,7 @@ GameObject:
   - component: {fileID: 1295844766}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Finsih
+  m_TagString: Finish5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

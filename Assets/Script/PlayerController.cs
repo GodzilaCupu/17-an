@@ -82,9 +82,17 @@ public class PlayerController : MonoBehaviour
     {
         if (trigger.gameObject.tag == "Finsih")
         {
-            SceneManager.LoadScene(2);
-        }
+            SceneManager.LoadScene(3);
+        }else
         if (trigger.gameObject.tag == "Finsih2")
+        {
+            SceneManager.LoadScene(0);
+        }else
+        if (trigger.gameObject.tag == "Finish5")
+        {
+            SceneManager.LoadScene(4);
+        }else
+        if (trigger.gameObject.tag == "Finish4")
         {
             SceneManager.LoadScene(0);
         }

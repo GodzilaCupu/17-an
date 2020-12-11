@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 538600259d162d0408e17c60872f96e2
+  - enabled: 1
+    path: Assets/Scenes/Menu secondary.unity
+    guid: 1ee53d971235af449baf199e0c90c989
+  - enabled: 1
     path: Assets/Scenes/balapKarungStage.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Apanih Stage.unity
+    guid: bcc0eb7619a6f014ba555af2714fe7d9
+  - enabled: 1
+    path: Assets/Scenes/balapKarung Single.unity
+    guid: e61198f102641534fbd4a55ffb83d434
+  - enabled: 1
+    path: Assets/Scenes/Apanih Stage Single.unity
+    guid: de9d369006a614a45864457eb970ee0a
   m_configObjects: {}
